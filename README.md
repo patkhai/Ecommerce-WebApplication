@@ -3,7 +3,7 @@ A web application that helps student in University to buy and sell items they wa
 
 Build using Flask as backend, (Jinja templates) Javascript & Bootstrap as frontend along with MySQL database.  
 
-Check out here at http://13.52.236.160/
+# Check out here at http://13.52.236.160/
 
 
 
