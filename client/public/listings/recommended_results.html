@@ -1,0 +1,24 @@
+{% extends 'index.html' %} {% block body %}
+<link href="../../resources/css/result_page.css" />
+<div style="margin-top: 5%">
+    Showing your recommended listings
+    <ul id="resultList">
+        <p id="noResultTag"></p>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.filterdown').change(function(){
+            $("#width_tmp_option").html($('.filterdown option:selected').text());
+            $(this).width($("#width_tmp_select").width());
+        });
+    });
+</script>
+
+<script src="../../scripts/domCreation.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    fetchRecommendedListings();
+</script>
+{% endblock body %}

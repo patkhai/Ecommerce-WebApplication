@@ -1,0 +1,155 @@
+.jumbotron_box{
+     margin-top:4%;
+     height:30%;
+     text-align:center;
+}
+
+.categories{
+    margin: 20px auto;
+}
+
+.column{
+    float: left;
+    width:10%;
+    padding:10px;
+    height:20px;
+}
+
+.recommendation{
+    margin: -330px !important;
+    padding-left: 330px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 576px){
+
+    .jumbotron_box{
+        margin-top:14%;
+    }
+
+    .box{
+        border-radius: 30px;
+        margin-left:0px !important;
+        width: 30%;
+    }
+    .no-gutters{
+        padding-bottom: 200px;
+    }
+
+    .no-gutters>.col, .no-gutters>[class*=col-] {
+        padding-right: 0px;
+        padding-left: 40px;
+    }
+
+    .recommendation{
+        margin: -330px !important;
+        padding-top: 50px !important;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .row{
+        height:50px;
+    }
+    .jumbotron_box{
+        margin-top:4%;
+
+    }
+
+    .box {
+        border-radius: 30px;
+        margin: 2.2% 16.5% -290px 8.5%;
+        width: 30%;
+    }
+
+    .recommendation{
+
+        padding-top:400px;
+    }
+
+    .column{
+        float: left;
+        width:12.5%;
+        padding:10px;
+        height:20px;
+    }
+}
+
+@media screen and (max-width: 1033px){
+    .jumbotron_box{
+        margin-top:4%;
+    }
+
+    .box {
+        border-radius: 30px;
+        margin: 2.2% 16.5% -290px 19.5%;
+        width: 30%;
+    }
+
+    .recommendation{
+        margin: 0 !important;
+        padding-left: 0px;
+    }
+
+    .column{
+        float: left;
+        width:12.5%;
+        padding:10px;
+        height:20px;
+    }
+}
+
+@media screen and (max-width: 1131px){
+    .jumbotron_box{
+        margin-top:4%;
+    }
+
+    .box {
+        border-radius: 30px;
+        margin: 2.2% 16.5% -290px 19.5%;
+        width: 30%;
+    }
+
+    .recommendation{
+        margin: 0 !important;
+        padding-left: 0px;
+    }
+
+    .column{
+        float: left;
+        width:12.5%;
+        padding:10px;
+        height:20px;
+    }
+}
+
+@media screen and (max-width: 743px){
+    .jumbotron_box{
+        margin-top:4%;
+    }
+
+    .box {
+        border-radius: 30px;
+        margin: 2.2% 16.5% -290px 4.5%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 429px){
+    .jumbotron_box{
+        margin-top:4%;
+    }
+
+    .box{
+        border-radius: 30px;
+        margin: 2.2% 16.5% 0 4.5%;
+        width: 30%;
+    }
+
+    .no-gutters>.col, .no-gutters>[class*=col-] {
+        padding-right: 0px;
+        padding-left: 24px;
+    }
+
+}

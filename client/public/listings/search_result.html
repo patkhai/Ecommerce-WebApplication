@@ -1,0 +1,48 @@
+{% extends 'index.html' %} {% block body %}
+<link href="../../resources/css/result_page.css" />
+<script type="text/javascript">
+    const docWrite = (variable) => {
+        document.write(variable);
+    }
+</script>
+<div class="margin-top">
+    <div class="col-md-6" style="padding: 0px 0px;">
+        <font size="3">Sort by</font>
+        <select onchange="sortListings();" id="filterDropDown" name="sort_value" class="width_tmp_select">
+
+            <option selected value="">No Filter</option>
+            <option value="price_ascending">Price: Low to High</option>
+            <option value="price_descending">Price: High to Low</option>
+        </select>
+    </div>
+    Showing <k id="displayCount"></k> of <k id="resultCount"></k> Results for the
+    <b>
+        <script>
+            if (localStorage.getItem("category") !== null) {
+                docWrite(localStorage.getItem("category"));
+            }
+            else {
+                let string = "All Categories";
+                docWrite(string);
+            }
+        </script>
+    </b> :
+    <script>
+        if (localStorage.getItem("query") !== null) {
+            '"' + docWrite(localStorage.getItem("query")) + '"';
+        } else {
+            let string = "";
+            docWrite(string);
+        }
+    </script>
+    <br />
+    <p id="noResultTag"></p>
+    <ul id="resultList">
+    </ul>
+</div>
+<br><br>
+
+<script src="../../scripts/domCreation.js" type="text/javascript" charset="utf-8"></script>
+<script src='../../scripts/indexSearch.js' type="text/javascript"></script>
+<script src="../../scripts/search.js" type="text/javascript" charset="utf-8"></script>
+{% endblock body %}

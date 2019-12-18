@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<!-- main body -->
+<script src="../../scripts/domCreation.js"></script>
+<script src="../../scripts/admin.js" type="text/javascript" charset="utf-8"></script>
+
+ <section class="project-tab">
+     <div class="container">
+          <br>
+         <h1>Administrator Actions</h1>
+         <div class="row">
+             <div class="col-md-12">
+                 <nav>
+                     <div class="nav nav-tabs nav-fill">
+                         <a class="nav-item nav-link" href="{{ 'admin_pending' }}">Pending Approval</a>
+                         <a class="nav-item nav-link" href="{{ 'admin_all' }}">All Listings</a>
+                         <a class="nav-item nav-link" href="{{ 'admin_approved' }}">Approved Listings</a>
+                         <a class="nav-item nav-link" href="{{ 'admin_denied' }}">Denied Listings</a>
+                     </div>
+                 </nav>
+                 <div class="admindashboard-items">
+                     <br>{% block content %}
+                     {% endblock %}
+                 </div>
+                 <br>
+             </div>
+         </div>
+     </div>
+ </section>
+{% endblock %}

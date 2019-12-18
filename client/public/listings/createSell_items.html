@@ -1,0 +1,84 @@
+{% extends 'index.html' %}
+{% block body %}
+<br><br>
+<div class="container">
+    <div class="row" style=" margin-bottom: auto; margin-left: 3px">
+        <h2 class ="col-md-10 mb-3">Post Item to Sell</h2>
+    </div>
+        <div>
+            <div class="col-md-9 mb-3">
+                <label for="itemName"><strong>Title<font color="red">*</font>:</strong></label>
+                <div class="input-group">
+                <input type="text" class="form-control" id="itemName" name = "title" placeholder="" value="" required>
+                </div>
+                <div class="invalid-feedback">
+                    Valid name of item is required.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-md-4 mb-3">
+                <label for="itemName"><strong>Price<font color="red">*</font>:</strong></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input id="itemPrice" type="number" onkeypress="if(this.value.length==4) return false;" name="price" pattern="[0-9]" class="form-control text-right rounded-right" aria-label="Amount (to the nearest dollar)"
+                           required placeholder="0.00" >
+                    <div class="invalid-feedback">
+                        Valid price number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-md-9 mb-3">
+                <label for="itemDescription"><strong>Description:</strong></label>
+                <div class="input-group">
+                    <textarea class="form-control" id="itemDescription" name="description" maxlength="150" placeholder="Something about this item..." rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-md-4 mb-3">
+                <label for="sellListingSelectDropdown"><strong>Category<font color="red">*</font>:</strong></label>
+                <select class="custom-select d-block w-100" name="category" id="sellListingSelectDropdown" required>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid category.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-md-4 mb-3">
+                <label for="image_upload"><strong>Image<font color="red">*</font>: </strong></label>
+                <input type="file" class="form-control-file" id="image_upload" name="image" aria-describedby="fileHelp" required>
+                <small id="fileHelp" class="form-text text-muted">Note: Maximum image upload size is 3 MB.</small>
+                <div class="invalid-feedback">
+                    Please select a valid image file.
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-9 mb-3">
+            <hr>
+            <p><strong>Note:</strong> it may take up to 24 hours for administrator to approve the item.</p>
+
+            <!-- Click Cancel button will go back last page -->
+            <button onClick="javascript:history.go(-1)" class="btn btn-secondary btn-lg mb-5" type="cancel"  style="background: #9C9C9C; color:black;">Cancel</button>
+
+            <button id="submitButton" onclick="uploadImage();" class="float-right btn btn-primary btn-lg mb-4" type="submit" style="background: #FFC107; color:black;">Submit</button>
+        </div>
+</div>
+
+<script src="../../scripts/uploadImage.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    checkIfRedirected();
+</script>
+
+
+{% endblock %}

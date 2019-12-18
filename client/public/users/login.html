@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<body>
+  <div class="loginpage">
+  <div class="form">
+    <!------------user log in form ----------->
+  <div class="login-form" style="width: 340px;margin:150px auto">
+    <div>
+        <h2 class="text-center">Log in</h2>       
+        <div class="form-group">
+            <input id= "login-username" type="text" class="form-control" placeholder="Username" required="required" value=""/>
+        </div>
+        <div class="form-group">
+            <input id="login-password" type="password" class="form-control" placeholder="Password" required="required" value=""/>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block btn-warning form-control" id="login" onclick="loginUser()">Log in</button>
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+            <p class="message"><a href="#" class="pull-right text-warning" id="reset-password">Forgot Password?</a></p>
+        </div>  
+        <p class="text-center "><a href="{{ 'signup' }}"class="text-primary" >Create an Account</a></p>      
+    </div>
+  </div>
+
+
+<!------------------reset password form ----------------->
+<div class="reset-form" style="width: 340px;margin:150px auto; background: #f7f7f7; padding: 30px; display:none ">
+  <form action="/" method="POST" >
+    <h3 class="ml-5 pl-5"><i class="fa fa-lock fa-4x"></i></h3>
+    <h2 class="text-center">Forgot Password?</h2>    
+      <div class="">
+          <input id="reset-password-email" name="email" placeholder="email address" class="form-control"  type="email" required>
+      </div>
+      <div class="">
+        <!----------check how should we want to handle it?--------->
+        <button type="submit" class="btn btn-block btn-warning submit-reset-password" >Reset Password</button>
+      </div>      
+  </form>
+</div>
+
+<!------------------ email sending successful  ----------------->
+<div class="email-reset-form" style="width: 340px;margin:150px auto; background: #f7f7f7; padding: 30px; display:none; ">
+    <h4 class="ml-5 pl-5"><i class="fa fa-envelope fa-4x" style="color:#400449"></i></h4>
+    <br> 
+    <dt class="text-primary ml-4 pl-1"> Please check your email, we sent the reset password link.</dt>    
+</div>
+
+</div>
+</div>
+<script src="../scripts/login.js"></script>
+</body>
+
+ {% endblock %}

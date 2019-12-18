@@ -1,0 +1,40 @@
+ {% extends 'index.html' %} {% block body %}
+<!-- main body -->
+ <script type="text/javascript">
+    const docWrite = (variable) => {
+        document.write(variable);
+    }
+</script>
+ <script src="../../scripts/domCreation.js"></script>
+<script src="../../scripts/dashboard.js" type="text/javascript" charset="utf-8"></script>
+ <div class="project-tab">
+     <div class="container">
+          <br>
+         <h3> Hello
+             <script>
+               if(localStorage.getItem("firstName") !== null) {
+                   docWrite(localStorage.getItem("firstName"));
+               }
+            </script>
+         </h3>
+         <div class="row">
+             <div class="col-md-12">
+                 <nav>
+                     <div class="nav nav-tabs nav-fill">
+                         <a class="nav-item nav-link" href="{{ '/users/approved_list' }}">Approved Items</a>
+                         <a class="nav-item nav-link" href="{{ '/users/pending_list' }}">Pending Items</a>
+                         <a class="nav-item nav-link" href="{{ '/message/messages' }}">Messages</a>
+                     </div>
+                 </nav>
+                 <div class="dashboard-items">
+                     <br>{% block content %}
+                     {% endblock %}
+                 </div>
+                 <br>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+{% endblock %}

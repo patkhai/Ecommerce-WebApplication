@@ -1,0 +1,9 @@
+@media screen and (max-width: 600px) {
+  li {
+    flex-direction: row !important;
+  }
+  .port-item {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,35 @@
+{% extends 'users/dashboard.html' %}
+
+{% block content %}
+<h4>Messages Received</h4>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active">
+        <table class="table" id="message-table" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Message</th>
+                <th>Sender</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+                <!--List items name and data goes here -->
+                <tr>
+                    <td><a id ="listing_id"> </a></td>
+
+                    <td><a id ="message_body"></a></td>
+
+                    <td><a id ="sent_by"></a></td>
+
+                    <td><a id ="timestamp"></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+    getMessages();
+    </script>
+</div>
+
+{% endblock %}

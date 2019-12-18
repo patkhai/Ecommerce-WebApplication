@@ -1,0 +1,52 @@
+{% extends 'users/admin_page.html' %}
+
+{% block content %}   
+<h4>Approved Listings</h4>
+<div class="tab-content" style="overflow-x: scroll;">
+    <div class="tab-pane fade show active">
+        <table class="table" id="approved-listings-table" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <!--List items name and data goes here -->
+               <tr>
+                    <td><img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/268293667667284p?$imagePLP$&wid=256&hei=256" alt="Couch" height=100 width=100></td>
+                    <td class="align-middle">Couch</td>
+                    <td>Used Couch For Sale</td>
+                    <td>
+                        <button class="denyButton remove" id="denyButton">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="http://blog.fitnyc.edu/admissions/files/2016/08/textbooks.resized-1.jpg" alt="Couch" height=100 width=100></td>
+                    <td>Math Textbook</td>
+                    <td>Barely used math textbook for MAth 324</td>
+                    <td>
+                        <button class="denyButton remove" id="denyButton">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5712/5712110_sd.jpg" alt="Couch" height=100 width=100></td>
+                    <td>Microwave</td>
+                    <td>Brand new microwave for sale</td>
+                    <td>
+                        <button class="denyButton remove" id="denyButton">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    getApprovedListings();
+</script>
+
+{% endblock %}

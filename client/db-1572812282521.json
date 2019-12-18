@@ -1,0 +1,28 @@
+{
+  "listings": [
+    {
+      "listing_id": 1,
+      "sold_by": "AC1411",
+      "title": "Red sofa",
+      "is_approved": false,
+      "created_on": "10/16/2019",
+      "last_updated": "09/16/2019",
+      "approved_by": null,
+      "price": "500.00",
+      "image": "https://via.placeholder.com/150",
+      "category": "furniture"
+    },
+    {
+      "listing_id": 2,
+      "sold_by": "AC151",
+      "title": "Purple iphone case",
+      "is_approved": true,
+      "created_on": "10/11/2019",
+      "last_updated": "10/12/2019",
+      "approved_by": "SD235",
+      "price": "500.00",
+      "image": "https://via.placeholder.com/150",
+      "category": "furniture"
+    }
+  ]
+}
