@@ -1,4 +1,4 @@
-# Ecommerce-WebApplication
+# Gator Trader
 A web application that helps student in University to buy and sell items they want. 
 
 Build using Flask as backend, (Jinja templates) Javascript & Bootstrap as frontend along with MySQL database.  
